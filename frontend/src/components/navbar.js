@@ -1,32 +1,38 @@
-import React from 'react'
+import React, {  } from 'react'
 import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
+
     return (
-        <div>
-            <header class="text-gray-600 body-font">
-                <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
-                        <span class="ml-3 text-xl">Tailblocks</span>
-                    </a>
-                    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                        <a class="mr-5 hover:text-gray-900">First Link</a>
-                        <a class="mr-5 hover:text-gray-900">Second Link</a>
-                        <a class="mr-5 hover:text-gray-900">Third Link</a>
-                        <a class="mr-5 hover:text-gray-900">Fourth Link</a>
-                    </nav>
-                    <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
+            <nav className="navbar navbar-expand-lg sticky-top navbar-dark">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="#">Agro.AI</Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                <Link className={`nav-link `} aria-current="page" to="/store">Store</Link>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tools
+                                </Link>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><Link className="dropdown-item" to="/disease">Plant Diseases</Link></li>
+                                    <li><Link className="dropdown-item" to="/predsoil">Suggest Crop</Link></li>
+                                    <li><hr className="dropdown-divider" /></li>
+                                    <li><Link className="dropdown-item" to="/helpingHand">Helping Hands</Link></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <button type="submit" class="btn btn-secondary">Login</button>
+                    </div>
                 </div>
-            </header>
-        </div>
+            </nav>
     )
 }
 

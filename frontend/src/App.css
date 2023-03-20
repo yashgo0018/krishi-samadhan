@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,8 +6,81 @@
   list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.df {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.h_main {
+  max-width: 50%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.navbar{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #00000040;
+  color: white;
+}.s_input{
+  border-radius: 15px;
+  border-width: 0px;
+  background-color: #ffffffa0;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  
+}.s_input::placeholder{
+  color: black;
+  font-weight: bolder;
+}
+.s_button{
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.home {
+  background-image: url("../public/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;  
+}
+.hr {
+  width: 80%;
+  height: 3px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(26, 102, 238, 1) 0%, rgba(0, 228, 255, 1) 72%);
+}
+.disease_main{
+  height: 100vh;
+}
+.img_upload{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  margin-top: 20px;
+}.desc{
+  width: 70vw;
+}.img_drop{
+  height: 100vh;
+}
+.drop_zone{
+  border: dotted black 2px;
+  height: 200px;
+  width: 200px;
+  border-radius: 30px;
+}#img{
+  border-radius: 30px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
